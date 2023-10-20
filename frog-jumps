@@ -1,0 +1,8 @@
+def solution(X, Y, D):
+    distance = Y - X  #finds the remaining distance needed to go
+    jumps = distance // D  #divides the distance by the length of the jump, rounding down
+
+    if distance % D != 0: #if there is any remainder, another jump is needed
+        jumps += 1
+
+    return jumps
