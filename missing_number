@@ -1,0 +1,10 @@
+def solution(A):
+    N = len(A)  #N is the number of integers in the array A
+
+    Nsum = (N + 2) * (N + 1) // 2  #calculates the sum of 1 to N+1
+
+    arraysum = sum(A)  #calculates the sum of the integers in the array
+
+    missing = Nsum - arraysum  #the difference between what the sum *should* be and what it actually is equals the missing element
+
+    return missing
