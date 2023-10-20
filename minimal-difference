@@ -1,0 +1,13 @@
+def solution(A):
+    N = len(A)  #creates a variable N as the number of integers in A
+    firstpart = A[0]  #firstpart variable is the first integer in the array
+    secondpart = sum(A) - firstpart    #secondpart variable will find the sum of the integers following the firstpart
+    minimal = abs(firstpart - secondpart)  #finds the difference between the 2 parts, returing absolute value 
+
+    for P in range (1, N-1):  #iterates through the array
+        firstpart += A[P]       #adds all integers, starting with A[0] up through A[P-1]
+        secondpart = sum(A) - firstpart   
+        difference = abs(firstpart - secondpart)  
+        minimal = min(minimal, difference)  #returns the smaller of the 2 values
+
+    return minimal
