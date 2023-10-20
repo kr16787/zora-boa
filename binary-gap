@@ -1,0 +1,16 @@
+def solution(N):
+    N = int(N)
+    binary_str = bin(N)[2:]
+    
+    current_gap = 0.  #variables to track the gaps
+    max_gap = 0
+
+    for char in binary_str:  #iterate through the binary string
+        if char == '0':
+            current_gap += 1.  #adds to the current gap count
+        else:
+            if current_gap > 0:
+                max_gap = int(max(max_gap, current_gap))
+            current_gap = 0
+
+    return max_gap
