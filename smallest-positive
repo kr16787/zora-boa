@@ -1,0 +1,13 @@
+def solution(A):
+    pos_int = set()  #creates a set to store the positive integers
+
+    for num in A:   #iterates through the set, adding in the positive integers
+        if num > 0:
+            pos_int.add(num)
+
+    smallest = 1
+
+    while smallest in pos_int:  #starts from 1, adds up 1 at a time until the smallest positive int *not* in the set is found
+        smallest += 1
+
+    return smallest
