@@ -1,0 +1,10 @@
+def solution(A, K):
+    if not A:  #If the array is empty or K=0
+            return A
+
+    N = len(A)  #Assigns a variable N to be equal to the # of integers in the array
+    K %= N  #Modulus, the remainder after dividing K/N
+
+    rotated_array = A[-K:] + A[:-K]  #rotates the array, slicing into 2 parts and reversing them
+
+    return rotated_array
