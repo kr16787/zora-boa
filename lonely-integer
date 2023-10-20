@@ -1,0 +1,7 @@
+def solution(A):
+    unpaired = 0
+
+    for number in A:
+        unpaired ^= number  #the XOR operator combines all integers; XOR of 2 equal values cancels out, leaving the unpaired integer remaining
+
+    return unpaired
