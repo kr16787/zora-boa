@@ -1,0 +1,13 @@
+def solution(A):
+    array = set()
+
+    for num in A:
+        if num > -1000000 and num < 1000000:
+            array.add(num)
+
+    smallest = 1
+
+    while smallest in array:
+        smallest +=1
+
+    return smallest
