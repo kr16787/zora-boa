@@ -1,0 +1,11 @@
+def solution(A):
+    N = len(A)
+
+    perm_list = set()
+
+    for num in A:
+        if num < 1 or num > N or num in perm_list:
+            return 0
+        perm_list.add(num)
+
+    return 1 if len(perm_list) == N else 0
